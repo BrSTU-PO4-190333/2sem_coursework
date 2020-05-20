@@ -33,6 +33,7 @@ void menu(struct reservoirs_of_the_country* array, int length)
         case '5':
             break;
         case '6':
+            del_data(array, length);
             break;
         default:
             menu(array, length);
