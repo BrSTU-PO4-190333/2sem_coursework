@@ -3,5 +3,7 @@
 
     #include <stdio.h>
 
+    #include "../../my_libs/clear_console/clear_console.h"
+
     void menu();
 #endif
