@@ -16,9 +16,10 @@ void print_sep()
 void write_table(struct reservoirs_of_the_country *array, int length)
 {
     clear_console();
-    if (length == 0)
+    if (length <= 0)
     {
         printf("Нет данных\n");
+        length = 0;
     }
     else
     {
@@ -65,7 +66,7 @@ void write_table(struct reservoirs_of_the_country *array, int length)
             print_sep();
             printf("%4d", i);
             print_sep();
-            printf("%4d ", array[length].name_size);
+            printf("%4d ", array[i].name_size);
             printf("%8s", array[i].name);
             print_sep();
             printf("%8ld", array[i].length);
