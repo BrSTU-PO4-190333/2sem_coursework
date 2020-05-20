@@ -1,6 +1,6 @@
 #include "menu.h"
 
-void menu()
+void menu(struct reservoirs_of_the_country* array, int length)
 {
     clear_console();
 
@@ -23,8 +23,10 @@ void menu()
         case '1':
             break;
         case '2':
+            add_element(array, length);
             break;
         case '3':
+            write_table(array, length);
             break;
         case '4':
             break;
@@ -33,6 +35,6 @@ void menu()
         case '6':
             break;
         default:
-            menu();
+            menu(array, length);
     }
 }

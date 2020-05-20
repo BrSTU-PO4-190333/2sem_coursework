@@ -2,6 +2,8 @@
 
 void add_element(struct reservoirs_of_the_country* array, int length)
 {
+    clear_console();
+
     array = (struct reservoirs_of_the_country*) realloc(array, (length + 1)*sizeof(struct reservoirs_of_the_country));
 
     printf("Размер строки названия: ");
@@ -23,23 +25,9 @@ void add_element(struct reservoirs_of_the_country* array, int length)
     printf("Объем: ");
     scanf("%ld", &array[length].volume);
 
-    int choosen_type_case = 0;
-    while (choosen_type_case != 1 || choosen_type_case != 2)
-    {
-        printf("Тип: ");
-        printf("1. искусственный\n");
-        printf("2. природный\n");
-        scanf("%d", &choosen_type_case);
-    }
-    switch(choosen_type_case)
-    {
-        case 1:
-            array[length].water_type = artificial;
-            break;
-        case 2:
-            array[length].water_type = natural;
-            break;
-    }
+    input_type(array, length);
+
+    length++;
 
     menu(array, length);
 }
