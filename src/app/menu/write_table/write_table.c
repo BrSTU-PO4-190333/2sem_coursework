@@ -64,18 +64,18 @@ void write_table(struct reservoirs_of_the_country *array, int length)
         for (int i = 0; i < length; i++)
         {
             print_sep();
-            printf("%4d", i);
+            printf("%-4d", i);
             print_sep();
-            printf("%4d ", array[i].name_size);
-            printf("%8s", array[i].name);
+            printf("%-4d ", array[i].name_size);
+            printf("%-8s", array[i].name);
             print_sep();
-            printf("%8ld", array[i].length);
+            printf("%-8ld", array[i].length);
             print_sep();
-            printf("%8ld", array[i].width);
+            printf("%-8ld", array[i].width);
             print_sep();
-            printf("%8ld", array[i].depth);
+            printf("%-8ld", array[i].depth);
             print_sep();
-            printf("%8ld", array[i].volume);
+            printf("%-8ld", array[i].volume);
             print_sep();
             if (array[i].water_type == artificial) //если искусственный источник, то
             {
