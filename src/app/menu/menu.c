@@ -34,6 +34,7 @@ void menu(struct reservoirs_of_the_country *array, int length)
         save_file(array, length);
         break;
     case '5':
+        correct_field(array, length);
         break;
     case '6':
         del_data(array, length);

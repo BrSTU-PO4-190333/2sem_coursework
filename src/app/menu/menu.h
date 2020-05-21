@@ -3,11 +3,12 @@
 
     #include <stdio.h>
 
-    #include "add_element/add_element.h" //2
-    #include "del_data/del_data.h" //6
     #include "open_file/open_file.h" //1
-    #include "save_file/save_file.h" //4
+    #include "add_element/add_element.h" //2
     #include "write_table/write_table.h" //3
+    #include "save_file/save_file.h" //4
+    #include "correct_field/correct_field.h" //5
+    #include "del_data/del_data.h" //6
     #include "add_element/add_element_on_position.h"
     #include "../../my_libs/clear_console/clear_console.h"
 
