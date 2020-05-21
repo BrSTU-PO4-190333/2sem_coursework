@@ -24,6 +24,9 @@ void menu_sort_data(struct reservoirs_of_the_country *array, int length)
     {
         case '0':
             break;
+        case '1':
+            sort_field_name(array, length, indices_array);
+            break;
         case '2':
             sort_field_length(array, length, indices_array);
             break;

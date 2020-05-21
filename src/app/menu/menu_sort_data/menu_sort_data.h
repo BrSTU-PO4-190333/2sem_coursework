@@ -6,6 +6,7 @@
 
     #include "../menu.h"
     #include "../../../my_libs/pause_console/pause_console.h"
+    #include "sort_field_name/sort_field_name.h"
     #include "sort_field_length/sort_field_length.h"
 
     void menu_sort_data(struct reservoirs_of_the_country*, int);
