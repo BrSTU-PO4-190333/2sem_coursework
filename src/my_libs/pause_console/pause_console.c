@@ -4,4 +4,5 @@ void pause_console()
 {
     printf("Нажмите любую клавишу для продолжения...\n");
     getch();
+    getch();
 }

@@ -83,10 +83,10 @@ void open_file(struct reservoirs_of_the_country *array, int length)
             
         }
         free(word);
+        fclose(file_pointer);
     }
 
-    fclose(file_pointer);
-    pause_console();
+    
     pause_console();
     menu(array, length);
 }
