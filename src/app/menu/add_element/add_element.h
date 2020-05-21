@@ -1,7 +1,11 @@
 #ifndef _ADD_ELEMENT_H_
     #define _ADD_ELEMENT_H_
 
+    #include <stdio.h>
+    #include <stdlib.h>
+
     #include "../../../my_libs/clear_console/clear_console.h"
+    #include "../../../my_libs/pause_console/pause_console.h"
     #include "../../../my_libs/getch/getch.h"
     #include "input_depth/input_depth.h"
     #include "input_length/input_length.h"

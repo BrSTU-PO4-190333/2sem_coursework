@@ -13,10 +13,10 @@ void print_sep()
     printf(" | ");
 }
 
-void write_table(struct reservoirs_of_the_country *array, int length)
+void write_table(struct reservoirs_of_the_country *array, int length, int* indices_array, int iterations)
 {
     clear_console();
-    if (length <= 0)
+    if (length < iterations)
     {
         printf("Нет данных\n");
         length = 0;
@@ -66,22 +66,22 @@ void write_table(struct reservoirs_of_the_country *array, int length)
             print_sep();
             printf("%-4d", i);
             print_sep();
-            printf("%-4d ", array[i].name_size);
-            printf("%-8s", array[i].name);
+            printf("%-4d ", array[indices_array[i]].name_size);
+            printf("%-8s", array[indices_array[i]].name);
             print_sep();
-            printf("%-8ld", array[i].length);
+            printf("%-8ld", array[indices_array[i]].length);
             print_sep();
-            printf("%-8ld", array[i].width);
+            printf("%-8ld", array[indices_array[i]].width);
             print_sep();
-            printf("%-8ld", array[i].depth);
+            printf("%-8ld", array[indices_array[i]].depth);
             print_sep();
-            printf("%-8ld", array[i].volume);
+            printf("%-8ld", array[indices_array[i]].volume);
             print_sep();
-            if (array[i].water_type == artificial) //если искусственный источник, то
+            if (array[indices_array[i]].water_type == artificial) //если искусственный источник, то
             {
                 printf("искусственный ");
             }
-            else if (array[i].water_type == natural) //если натуральное происхождение, то
+            else if (array[indices_array[i]].water_type == natural) //если натуральное происхождение, то
             {
                 printf("природный     ");
             }
