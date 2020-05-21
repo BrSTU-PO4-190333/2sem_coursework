@@ -11,6 +11,7 @@
     #include "sort_field_width/sort_field_width.h"
     #include "sort_field_depth/sort_field_depth.h"
     #include "sort_field_volume/sort_field_volume.h"
+    #include "sort_field_water_type/sort_field_water_type.h"
 
     void menu_sort_data(struct reservoirs_of_the_country*, int);
 #endif

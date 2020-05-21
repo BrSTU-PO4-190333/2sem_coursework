@@ -39,6 +39,9 @@ void menu_sort_data(struct reservoirs_of_the_country *array, int length)
         case '5':
             sort_field_volume(array, length, indices_array);
             break;
+        case '6':
+            sort_field_water_type(array, length, indices_array);
+            break;
         default:
             menu_sort_data(array, length);
     }
