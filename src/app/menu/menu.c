@@ -37,7 +37,7 @@ void menu(struct reservoirs_of_the_country *array, int length)
         correct_field(array, length);
         break;
     case '6':
-        del_data(array, length);
+        menu_del_data(array, length);
         break;
     case '7':
         add_element_on_position(array, length);

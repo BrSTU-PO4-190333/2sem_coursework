@@ -1,6 +1,6 @@
-#include "del_data.h"
+#include "del_one_element.h"
 
-void del_data(struct reservoirs_of_the_country *array, int length)
+void del_one_element(struct reservoirs_of_the_country *array, int length)
 {
     clear_console();
 
