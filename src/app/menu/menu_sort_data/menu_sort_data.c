@@ -30,6 +30,9 @@ void menu_sort_data(struct reservoirs_of_the_country *array, int length)
         case '2':
             sort_field_length(array, length, indices_array);
             break;
+        case '3':
+            sort_field_width(array, length, indices_array);
+            break;
         default:
             menu_sort_data(array, length);
     }
