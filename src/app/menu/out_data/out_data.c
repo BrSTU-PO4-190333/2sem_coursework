@@ -8,6 +8,7 @@ void out_data(struct reservoirs_of_the_country* array, int length)
     if (indices_file_pointer == NULL) //если файл не открылся
     {
         printf("[!] Индексный файл не найден!\n");
+        pause_console();
     }
     else // если файл открылся успешно
     {
@@ -37,6 +38,5 @@ void out_data(struct reservoirs_of_the_country* array, int length)
         fclose(indices_file_pointer); //закрыть файл
     } //конец проверки открытия файла
     
-    pause_console(); //ждать нажатие клавиши пользователем
     menu(array, length); //вывод меню
 }

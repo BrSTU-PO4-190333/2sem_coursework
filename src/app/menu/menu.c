@@ -16,9 +16,7 @@ void menu(struct reservoirs_of_the_country *array, int length)
     printf("0. Выйти из программы\n");
 
     int choosen_case; //переменная для содержания пункта меню
-    choosen_case = getch();
-
-    switch (choosen_case)
+    switch (choosen_case = getch())
     {
     case '0':
         break;

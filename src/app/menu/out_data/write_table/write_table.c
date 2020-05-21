@@ -90,5 +90,4 @@ void write_table(struct reservoirs_of_the_country *array, int length, int* indic
         }
     }
     pause_console();
-    menu(array, length);
 }
