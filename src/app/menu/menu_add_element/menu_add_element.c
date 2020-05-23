@@ -8,7 +8,8 @@ void menu_add_element(struct reservoirs_of_the_country* array, int length)
     printf("1. Добавить элемент в конец\n");
     printf("2. Добавить элемент перед элементом\n");
     printf("3. Добавить элемент в позицию\n");
-    printf("4. Добавить элемент после элемента\n");
+    printf("4. Заменить элемент\n");
+    printf("5. Добавить элемент после элемента\n");
     printf("0. Выйти в главное меню\n");
 
     int choosen_case;
@@ -28,6 +29,9 @@ void menu_add_element(struct reservoirs_of_the_country* array, int length)
         add_element_on_position(array, length);
         break;
     case '4':
+        replace_element(array, length);
+        break;
+    case '5':
         add_element_after_element(array, length);
         break;
     default:
