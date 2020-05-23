@@ -8,7 +8,7 @@ void del_one_element(struct reservoirs_of_the_country *array, int length)
     printf("Какой элемент удалить: ");
     scanf("%d", &delete_id);
 
-    if (delete_id <= length) //если удаляемый индекс меньше размера строки
+    if (delete_id < length && delete_id >= 0) //если удаляемый индекс меньше размера строки
     {
         length--;
         for (int i = delete_id; i < length; i++)

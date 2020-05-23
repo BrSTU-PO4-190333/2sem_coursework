@@ -6,7 +6,7 @@ void del_data_from(struct reservoirs_of_the_country *array, int length)
     int delete_id;
     printf("С какого элемента удалить: ");
     scanf("%d", &delete_id);
-    if (delete_id <= length) //если удаляемый индекс меньше размера строки
+    if (delete_id < length && delete_id >= 0) //если удаляемый индекс меньше размера строки
     {
         int iterations_need = length - delete_id;
 
