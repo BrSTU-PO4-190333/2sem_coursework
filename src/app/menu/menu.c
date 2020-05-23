@@ -11,8 +11,7 @@ void menu(struct reservoirs_of_the_country *array, int length)
     printf("4. Сохранить как\n");
     printf("5. Корректировать поле\n");
     printf("6. Удаление элемента\n");
-    printf("7. Добавить элемент после\n");
-    printf("8. Сортировка по полю\n");
+    printf("7. Сортировка по полю\n");
     printf("0. Выйти из программы\n");
 
     int choosen_case; //переменная для содержания пункта меню
@@ -24,7 +23,7 @@ void menu(struct reservoirs_of_the_country *array, int length)
         open_file(array, length);
         break;
     case '2':
-        add_element(array, length);
+        menu_add_element(array, length);
         break;
     case '3':
         out_data(array, length);
@@ -39,9 +38,6 @@ void menu(struct reservoirs_of_the_country *array, int length)
         menu_del_data(array, length);
         break;
     case '7':
-        add_element_on_position(array, length);
-        break;
-    case '8':
         menu_sort_data(array, length);
         break;
     default:

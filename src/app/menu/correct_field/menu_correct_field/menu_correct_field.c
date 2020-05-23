@@ -1,3 +1,5 @@
+#include "menu_correct_field.h"
+
 void menu_correct_field(struct reservoirs_of_the_country *array, int length, int number_correct_field)
 {
     clear_console();

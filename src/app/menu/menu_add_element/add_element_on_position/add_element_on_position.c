@@ -1,15 +1,5 @@
 #include "add_element_on_position.h"
 
-void input_fields(struct reservoirs_of_the_country *array, int length, int position)
-{
-    input_name(array, position);
-    input_length(array, position);
-    input_width(array, position);
-    input_depth(array, position);
-    input_volume(array, position);
-    input_type(array, position);
-}
-
 void add_element_on_position(struct reservoirs_of_the_country *array, int length)
 {
     clear_console();
@@ -26,11 +16,11 @@ void add_element_on_position(struct reservoirs_of_the_country *array, int length
             array[i] = array[i - 1];
         }
         position = 0;
-        input_fields(array, length, position);
+        input_fields(array, position);
     }
     else if (position >= length) //если пользователь ввел последний элемент или конец строки
     {
-        input_fields(array, length, length);
+        input_fields(array, length);
     }
     else //если два условия не сработали, то
     {
@@ -38,10 +28,10 @@ void add_element_on_position(struct reservoirs_of_the_country *array, int length
         {
             array[i] = array[i - 1];
         }
-        input_fields(array, length, position);
+        input_fields(array, position);
     } //конец условия
 
-    FILE* indices_file_pointer = fopen("indices.txt", "at");
+    FILE* indices_file_pointer = fopen("indices.txt", "wt");
     if (indices_file_pointer == NULL)
     {
         printf("[!] Индексный файл не может октрыться!!!\n");
@@ -49,14 +39,25 @@ void add_element_on_position(struct reservoirs_of_the_country *array, int length
     }
     else
     {
-        for (int i = 0; i < length; i++)
+        for (int i = 0; i <= length; i++)
         {
-            fprintf(indices_file_pointer, "%d\n", length);
+            fprintf(indices_file_pointer, "%d\n", i);
         }
-        fclose(indices_file_pointer);
+        
     }
+    fclose(indices_file_pointer);
 
     length++;
 
     menu(array, length);
+}
+
+void input_fields(struct reservoirs_of_the_country *array, int position)
+{
+    input_name(array, position);
+    input_length(array, position);
+    input_width(array, position);
+    input_depth(array, position);
+    input_volume(array, position);
+    input_type(array, position);
 }
