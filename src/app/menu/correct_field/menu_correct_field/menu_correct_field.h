@@ -10,6 +10,8 @@
     #include "../../menu_add_element/input_depth/input_depth.h"
     #include "../../menu_add_element/input_volume/input_volume.h"
     #include "../../menu_add_element/input_type/input_type.h"
+    #include "../../out_data/write_head_table/write_head_table.h"
+    #include "../../out_data/write_one_element/write_one_element.h"
 
     void menu_correct_field(struct reservoirs_of_the_country*, int, int);
 #endif

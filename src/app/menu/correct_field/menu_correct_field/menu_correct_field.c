@@ -3,6 +3,13 @@
 void menu_correct_field(struct reservoirs_of_the_country *array, int length, int number_correct_field)
 {
     clear_console();
+
+    printf("\n");
+    printf("Изменяемое поле:\n");
+    write_head_table();
+    write_one_element(array, number_correct_field);
+    printf("\n");
+
     printf("Редактированный элемент: %d\n", number_correct_field);
     printf("\n");
     printf("Меню:\n");
@@ -41,4 +48,12 @@ void menu_correct_field(struct reservoirs_of_the_country *array, int length, int
     default:
         menu_correct_field(array, length, number_correct_field);
     }
+
+    clear_console();
+    printf("Новый элемент:\n");
+    write_head_table();
+    write_one_element(array, number_correct_field);
+    printf("\n");
+
+    pause_console();
 }

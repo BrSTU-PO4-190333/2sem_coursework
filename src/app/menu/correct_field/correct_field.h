@@ -5,6 +5,7 @@
 
     #include "../menu.h"
     #include "../../../my_libs/clear_console/clear_console.h"
+    #include "../../../my_libs/pause_console/pause_console.h"
     #include "menu_correct_field/menu_correct_field.h"
 
     void correct_field(struct reservoirs_of_the_country *array, int length);
