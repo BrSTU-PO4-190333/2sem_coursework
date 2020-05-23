@@ -8,4 +8,5 @@ void input_ALL_fields(struct reservoirs_of_the_country *array, int position)
     input_depth(array, position);
     input_volume(array, position);
     input_type(array, position);
+    write_one_edit_element(array, position, "\nЭлемент:\n");
 }
