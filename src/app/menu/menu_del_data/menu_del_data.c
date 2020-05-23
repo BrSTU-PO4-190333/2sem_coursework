@@ -14,6 +14,7 @@ void menu_del_data(struct reservoirs_of_the_country *array, int length)
     switch (choosen_case = getch())
     {
     case '0':
+        menu(array, length);
         break;
     case '1':
         del_one_element(array, length);

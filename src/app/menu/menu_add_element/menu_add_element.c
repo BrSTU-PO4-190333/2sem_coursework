@@ -16,6 +16,7 @@ void menu_add_element(struct reservoirs_of_the_country* array, int length)
     switch(choosen_case = getch())
     {
     case '0':
+        menu(array, length);
         break;
     case '1':
         add_element_on_end(array, length);
