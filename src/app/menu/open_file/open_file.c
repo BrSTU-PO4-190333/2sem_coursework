@@ -92,7 +92,6 @@ void open_file(struct reservoirs_of_the_country *array, int length)
         }
         else
         {
-            int *indices_file = (int *)calloc(length, sizeof(int));
             for (int i = 0; i < length; i++)
             {
                 fprintf(indices_file_pointer, "%d\n", i);

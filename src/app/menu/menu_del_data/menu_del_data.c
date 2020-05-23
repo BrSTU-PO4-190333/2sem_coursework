@@ -1,3 +1,5 @@
+#include "menu_del_data.h"
+
 void menu_del_data(struct reservoirs_of_the_country *array, int length)
 {
     clear_console();
