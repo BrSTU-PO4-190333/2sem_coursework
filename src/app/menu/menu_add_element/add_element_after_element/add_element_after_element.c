@@ -1,12 +1,14 @@
-#include "add_element_on_position.h"
+#include "add_element_after_element.h"
 
-void add_element_on_position(struct reservoirs_of_the_country *array, int length)
+void add_element_after_element(struct reservoirs_of_the_country* array, int length)
 {
     clear_console();
 
     int position;
-    printf("Каким элементом вставить: ");
+    printf("После какого элементом вставить: ");
     scanf("%d", &position);
+
+    position++;
 
     array = (struct reservoirs_of_the_country*) realloc(array, (length + 1)*sizeof(struct reservoirs_of_the_country));
     if (position <= 0) //если пользователь ввел 0 или меньше, то
@@ -51,3 +53,4 @@ void add_element_on_position(struct reservoirs_of_the_country *array, int length
 
     menu(array, length);
 }
+

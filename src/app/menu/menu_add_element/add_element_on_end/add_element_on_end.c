@@ -6,12 +6,7 @@ void add_element_on_end(struct reservoirs_of_the_country* array, int length)
 
     array = (struct reservoirs_of_the_country *)realloc(array, (length + 1) * sizeof(struct reservoirs_of_the_country));
 
-    input_name(array, length);
-    input_length(array, length);
-    input_width(array, length);
-    input_depth(array, length);
-    input_volume(array, length);
-    input_type(array, length);
+    input_ALL_fields(array, length);
 
     FILE* indices_file_pointer = fopen("indices.txt", "wt");
     if (indices_file_pointer == NULL)
