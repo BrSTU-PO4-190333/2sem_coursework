@@ -1,18 +1,5 @@
 #include "./write_table.h"
 
-void print_line(int k)
-{
-    for (int i = 0; i < k; i++)
-    {
-        printf("-");
-    }
-}
-
-void print_sep()
-{
-    printf(" | ");
-}
-
 void write_table(struct reservoirs_of_the_country *array, int length, int* indices_array, int iterations)
 {
     clear_console();
@@ -63,30 +50,7 @@ void write_table(struct reservoirs_of_the_country *array, int length, int* indic
         //сама таблица
         for (int i = 0; i < length; i++)
         {
-            print_sep();
-            printf("%-4d", i);
-            print_sep();
-            printf("%-4d ", array[indices_array[i]].name_size);
-            printf("%-8s", array[indices_array[i]].name);
-            print_sep();
-            printf("%-8ld", array[indices_array[i]].length);
-            print_sep();
-            printf("%-8ld", array[indices_array[i]].width);
-            print_sep();
-            printf("%-8ld", array[indices_array[i]].depth);
-            print_sep();
-            printf("%-8ld", array[indices_array[i]].volume);
-            print_sep();
-            if (array[indices_array[i]].water_type == artificial) //если искусственный источник, то
-            {
-                printf("искусственный ");
-            }
-            else if (array[indices_array[i]].water_type == natural) //если натуральное происхождение, то
-            {
-                printf("природный     ");
-            }
-            print_sep();
-            printf("\n");
+            write_one_element(array, indices_array[i]);
         }
     }
     pause_console();
