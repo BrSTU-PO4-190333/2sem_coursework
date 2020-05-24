@@ -4,6 +4,9 @@ void write_one_edit_element(struct reservoirs_of_the_country *array, int positio
 {
     printf("%s", str);
     write_head_table();
+    print_sep();
+    printf("%-4d", position);
+    print_sep();
     write_one_element(array, position);
     printf("\n");
 

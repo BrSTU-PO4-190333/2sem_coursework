@@ -2,9 +2,6 @@
 
 void write_one_element(struct reservoirs_of_the_country *array, int position)
 {
-    print_sep();
-    printf("%-4d", position);
-    print_sep();
     printf("%-4d ", array[position].name_size);
     printf("%-8s", array[position].name);
     print_sep();

@@ -3,6 +3,7 @@
 
     #include <stdio.h>
 
+    #include "../print_sep/print_sep.h"
     #include "../../../app.h"
     #include "../../../../my_libs/pause_console/pause_console.h"
 

@@ -15,7 +15,8 @@ void write_table(struct reservoirs_of_the_country *array, int length, int* indic
 
         for (int i = 0; i < length; i++)
         {
-            write_one_element(array, indices_array[i]);
+            printf("%d", i);
+            write_one_element(array, i);
         }
         out_average_values_in_line(array, 0, length);
         out_min_values_in_line(array, 0, length);

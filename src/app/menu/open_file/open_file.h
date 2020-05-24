@@ -7,6 +7,7 @@
 
     #include "../../app.h"
     #include "../../../my_libs/pause_console/pause_console.h"
+    #include "../../../my_libs/indices_array/make_indiced_array.h"
 
     void open_file(struct reservoirs_of_the_country*, int);
 #endif

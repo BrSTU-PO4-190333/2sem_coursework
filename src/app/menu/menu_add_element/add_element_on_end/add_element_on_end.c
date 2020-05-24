@@ -8,22 +8,10 @@ void add_element_on_end(struct reservoirs_of_the_country* array, int length)
 
     input_ALL_fields(array, length);
 
-    FILE* indices_file_pointer = fopen("indices.txt", "wt");
-    if (indices_file_pointer == NULL)
-    {
-        printf("[!] Индексный файл не может октрыться!!!\n");
-        pause_console();
-    }
-    else
-    {
-        for (int i = 0; i <= length; i++)
-        {
-            fprintf(indices_file_pointer, "%d\n", i);
-        }
-        
-    }
-    fclose(indices_file_pointer);
-    
+    FILE* file_pointer = fopen("indices.txt", "a");
+    fprintf(file_pointer, "%d\n", length);
+    fclose(file_pointer);
+
     length++;
     
     menu(array, length);

@@ -11,5 +11,6 @@ void sort_field_name(struct reservoirs_of_the_country *array, int length, int* i
                 int_swap(&indices_array[i], &indices_array[j]);
             }
         }
-    }  
+    }
+    
 }

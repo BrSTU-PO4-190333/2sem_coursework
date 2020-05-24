@@ -2,6 +2,17 @@
 
 void menu_del_more_value_field(struct reservoirs_of_the_country *array, int length)
 {
+    clear_console();
+
+    write_head_table();
+    for (int i = 0; i < length; i++)
+    {
+        print_sep();
+        printf("%-4d", i);
+        print_sep();
+        write_one_element(array, i);
+    }
+
     int choosen_case;
 
     printf("Меню:\n");

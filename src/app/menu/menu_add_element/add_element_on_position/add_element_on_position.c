@@ -31,21 +31,7 @@ void add_element_on_position(struct reservoirs_of_the_country *array, int length
         input_ALL_fields(array, position);
     } //конец условия
 
-    FILE* indices_file_pointer = fopen("indices.txt", "wt");
-    if (indices_file_pointer == NULL)
-    {
-        printf("[!] Индексный файл не может октрыться!!!\n");
-        pause_console();
-    }
-    else
-    {
-        for (int i = 0; i <= length; i++)
-        {
-            fprintf(indices_file_pointer, "%d\n", i);
-        }
-        
-    }
-    fclose(indices_file_pointer);
+    add_element_on_indices_file(length, position);
 
     length++;
 

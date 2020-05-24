@@ -6,6 +6,8 @@
 
     #include "../menu.h"
     #include "../../../my_libs/pause_console/pause_console.h"
+    #include "../../../my_libs/indices_array/get_indices_array_from_file/get_indices_array_from_file.h"
+    #include "../../../my_libs/indices_array/save_indices_array_on_file/save_indices_array_on_file.h"
     #include "sort_field_name/sort_field_name.h"
     #include "sort_field_length/sort_field_length.h"
     #include "sort_field_width/sort_field_width.h"

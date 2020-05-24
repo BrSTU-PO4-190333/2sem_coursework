@@ -14,11 +14,9 @@ void menu_sort_data(struct reservoirs_of_the_country *array, int length)
 
     int choosen_case = getch();
 
-    int *indices_array = (int *)calloc(length, sizeof(int));
-    for (int i = 0; i < length; i++)
-    {
-        indices_array[i] = i;
-    }
+    int length_indices_array = 0; 
+    int *indices_array = (int *)calloc(length_indices_array, sizeof(int));
+    indices_array = get_indices_array_from_file(indices_array, &length_indices_array);
 
     switch(choosen_case)
     {
@@ -46,22 +44,7 @@ void menu_sort_data(struct reservoirs_of_the_country *array, int length)
             menu_sort_data(array, length);
     }
 
-    FILE *indices_file_pointer = fopen("indices.txt", "wt"); //открыли файл для записи как текстовый
-    if (indices_file_pointer == NULL)
-    {
-        printf("Индексный файл не может создаться!!!\n");
-        pause_console();
-    }
-    else
-    {
-        for (int i = 0; i < length; i++)
-        {
-            fprintf(indices_file_pointer, "%d\n", indices_array[i]); //записали индекс
-        }
-        fclose(indices_file_pointer); //закрыли файл
-    }
-
-    free(indices_array); //очистили массив индексов
+    save_indices_array_on_file(indices_array, length_indices_array);
 
     menu(array, length);
 }

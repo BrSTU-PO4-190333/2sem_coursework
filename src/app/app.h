@@ -1,6 +1,7 @@
 #ifndef _APP_H_
     #define _APP_H_
 
+    #include <stdio.h>
     #include <stdlib.h>
 
     enum water_type

@@ -82,24 +82,12 @@ void open_file(struct reservoirs_of_the_country *array, int length)
             }
         }
         free(word);
+        
+        make_indiced_array(length);
         fclose(file_pointer);
-
-        FILE *indices_file_pointer = fopen("indices.txt", "wt");
-        if (indices_file_pointer == NULL)
-        {
-            printf("[!] Индексный файл не может сохраниться!!!\n");
-            pause_console();
-        }
-        else
-        {
-            for (int i = 0; i < length; i++)
-            {
-                fprintf(indices_file_pointer, "%d\n", i);
-            }
-            fclose(indices_file_pointer);
-        } //конес условия открытости индексного файла
     } //конец условия открытости файла
-
+    
     pause_console();
+
     menu(array, length);
 }
