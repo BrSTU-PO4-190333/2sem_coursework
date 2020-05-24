@@ -1,14 +1,14 @@
 #include "out_max_values_in_line.h"
 
-void out_max_values_in_line(struct reservoirs_of_the_country* array, int length)
+void out_max_values_in_line(struct reservoirs_of_the_country* array, int left_border, int right_border)
 {
     int
-        max_length = array[0].length,
-        max_width = array[0].width,
-        max_depth = array[0].depth,
-        max_volume = array[0].volume;
+        max_length = array[left_border].length,
+        max_width = array[left_border].width,
+        max_depth = array[left_border].depth,
+        max_volume = array[left_border].volume;
 
-    for (int i = 1; i < length; i++)
+    for (int i = left_border; i < right_border; i++)
     {
         if (array[i].length > max_length)
         {

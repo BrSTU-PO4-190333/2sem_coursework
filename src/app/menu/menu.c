@@ -12,6 +12,7 @@ void menu(struct reservoirs_of_the_country *array, int length)
     printf("5. Корректировать поле\n");
     printf("6. Удаление элемент-а/-ов\n");
     printf("7. Сортировка по полю\n");
+    printf("8. Поиск min/max в диапазоне\n");
     printf("0. Выйти из программы\n");
 
     int choosen_case; //переменная для содержания пункта меню
@@ -39,6 +40,9 @@ void menu(struct reservoirs_of_the_country *array, int length)
         break;
     case '7':
         menu_sort_data(array, length);
+        break;
+    case '8':
+        find_min_max_on_range(array, length);
         break;
     default:
         menu(array, length);

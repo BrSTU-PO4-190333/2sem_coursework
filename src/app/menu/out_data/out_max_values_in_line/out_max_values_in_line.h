@@ -5,5 +5,5 @@
 
     #include "../../../app.h"
 
-    void out_max_values_in_line(struct reservoirs_of_the_country*, int);
+    void out_max_values_in_line(struct reservoirs_of_the_country*, int, int);
 #endif
