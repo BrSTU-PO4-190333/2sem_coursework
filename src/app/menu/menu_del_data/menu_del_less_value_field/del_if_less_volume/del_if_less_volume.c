@@ -2,9 +2,9 @@
 
 void del_if_less_volume(struct reservoirs_of_the_country *array, int length)
 {
-    int number;
+    float number;
     printf("Удалить поля 'Объема', которые меньше, чем: ");
-    scanf("%d", &number);
+    scanf("%f", &number);
 
     for (int i = 0; i <= length; i++)
     {

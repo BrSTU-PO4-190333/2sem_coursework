@@ -2,9 +2,9 @@
 
 void del_if_less_depth(struct reservoirs_of_the_country *array, int length)
 {
-    int number;
+    float number;
     printf("Удалить поля 'Глубин', которые меньше, чем: ");
-    scanf("%d", &number);
+    scanf("%f", &number);
 
     for (int i = 0; i <= length; i++)
     {
