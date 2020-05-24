@@ -7,6 +7,7 @@
     #include "../../../my_libs/clear_console/clear_console.h"
     #include "del_data_from/del_data_from.h"
     #include "del_one_element/del_one_element.h"
+    #include "menu_del_less_value_field/menu_del_less_value_field.h"
     #include "../menu.h"
 
     void menu_del_data(struct reservoirs_of_the_country *array, int length);

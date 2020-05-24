@@ -10,7 +10,7 @@ void menu(struct reservoirs_of_the_country *array, int length)
     printf("3. Просмотр данных\n");
     printf("4. Сохранить как\n");
     printf("5. Корректировать поле\n");
-    printf("6. Удаление элемента\n");
+    printf("6. Удаление элемент-а/-ов\n");
     printf("7. Сортировка по полю\n");
     printf("0. Выйти из программы\n");
 
