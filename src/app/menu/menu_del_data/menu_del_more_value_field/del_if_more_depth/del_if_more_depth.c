@@ -1,14 +1,14 @@
-#include "del_if_less_width.h"
+#include "del_if_more_depth.h"
 
-void del_if_less_width(struct reservoirs_of_the_country *array, int length)
+void del_if_more_depth(struct reservoirs_of_the_country *array, int length)
 {
     float number;
-    printf("Удалить поля 'Ширин', которые меньше, чем: ");
+    printf("Удалить поля 'Глубин', которые больше, чем: ");
     scanf("%f", &number);
 
     for (int i = 0; i < length; i++)
     {
-        if(array[i].width < number)
+        if(array[i].depth > number)
         {
             length--;
             for (int j = i; j < length; j++)

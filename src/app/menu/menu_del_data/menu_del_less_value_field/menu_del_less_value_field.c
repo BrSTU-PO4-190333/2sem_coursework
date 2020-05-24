@@ -14,6 +14,7 @@ void menu_del_less_value_field(struct reservoirs_of_the_country *array, int leng
     switch(choosen_case = getch())
     {
     case '0':
+        menu(array, length);
         break;
     case '1':
         del_if_less_length(array, length);

@@ -6,7 +6,7 @@ void del_if_less_length(struct reservoirs_of_the_country *array, int length)
     printf("Удалить поля 'Длин', которые меньше, чем: ");
     scanf("%f", &number);
 
-    for (int i = 0; i <= length; i++)
+    for (int i = 0; i < length; i++)
     {
         if(array[i].length < number)
         {

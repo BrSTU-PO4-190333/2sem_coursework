@@ -2,6 +2,7 @@
     #define _MENU_DEL_LESS_VALUE_FIELD_H_
 
     #include "../../../app.h"
+    #include "../../menu.h"
     #include "del_if_less_length/del_if_less_length.h"
     #include "del_if_less_width/del_if_less_width.h"
     #include "del_if_less_depth/del_if_less_depth.h"

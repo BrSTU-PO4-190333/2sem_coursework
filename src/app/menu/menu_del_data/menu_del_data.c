@@ -27,6 +27,9 @@ void menu_del_data(struct reservoirs_of_the_country *array, int length)
     case '3':
         menu_del_less_value_field(array, length);
         break;
+    case '4':
+        menu_del_more_value_field(array, length);
+        break;
     default:
         menu_del_data(array, length);
     }
