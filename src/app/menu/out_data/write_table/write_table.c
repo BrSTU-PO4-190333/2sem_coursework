@@ -18,6 +18,8 @@ void write_table(struct reservoirs_of_the_country *array, int length, int* indic
             write_one_element(array, indices_array[i]);
         }
         out_average_values_in_line(array, length);
+        out_min_values_in_line(array, length);
+        out_max_values_in_line(array, length);
     }
     
     pause_console();
