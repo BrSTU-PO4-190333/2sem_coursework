@@ -11,6 +11,7 @@
     #include "menu_del_data/menu_del_data.h" //6
     #include "menu_sort_data/menu_sort_data.h" //7
     #include "find_min_max_on_range/find_min_max_on_range.h" //8
+    #include "find_arrange_on_range/find_arrange_on_range.h" //9
     #include "../../my_libs/clear_console/clear_console.h"
 
     void menu(struct reservoirs_of_the_country*, int);

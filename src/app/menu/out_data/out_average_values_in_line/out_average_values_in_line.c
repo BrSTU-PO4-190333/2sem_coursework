@@ -1,6 +1,6 @@
 #include "out_average_values_in_line.h"
 
-void out_average_values_in_line(struct reservoirs_of_the_country* array, int length)
+void out_average_values_in_line(struct reservoirs_of_the_country* array, int left_border, int right_border)
 {
     double
         sum_length = 0,
@@ -8,13 +8,15 @@ void out_average_values_in_line(struct reservoirs_of_the_country* array, int len
         sum_depth = 0,
         sum_volume = 0;
     
-    for (int i = 0; i < length; i++)
+    for (int i = left_border; i <= right_border; i++)
     {
         sum_length += array[i].length;
         sum_width += array[i].width;
         sum_depth += array[i].depth;
         sum_volume += array[i].volume;
     }
+
+    int length = right_border - left_border + 1;
 
     print_sep();
     printf("%-4s", "cp.");
