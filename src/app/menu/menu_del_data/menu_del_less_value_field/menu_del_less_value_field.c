@@ -18,6 +18,15 @@ void menu_del_less_value_field(struct reservoirs_of_the_country *array, int leng
     case '1':
         del_if_less_length(array, length);
         break;
+    case '2':
+        del_if_less_width(array, length);
+        break;
+    case '3':
+        del_if_less_depth(array, length);
+        break;
+    case '4':
+        del_if_less_volume(array, length);
+        break;
     default:
         menu_del_less_value_field(array, length);
     }

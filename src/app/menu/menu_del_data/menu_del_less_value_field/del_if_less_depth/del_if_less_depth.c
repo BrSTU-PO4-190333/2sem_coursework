@@ -1,14 +1,14 @@
-#include "del_if_less_length.h"
+#include "del_if_less_depth.h"
 
-void del_if_less_length(struct reservoirs_of_the_country *array, int length)
+void del_if_less_depth(struct reservoirs_of_the_country *array, int length)
 {
     int number;
-    printf("Удалить поля 'Длин', которые меньше, чем: ");
+    printf("Удалить поля 'Глубин', которые меньше, чем: ");
     scanf("%d", &number);
 
     for (int i = 0; i <= length; i++)
     {
-        if(array[i].length < number)
+        if(array[i].depth < number)
         {
             length--;
             for (int j = i; j < length; j++)
