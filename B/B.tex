@@ -1,0 +1,975 @@
+\documentclass[12pt, a4paper]{article}
+
+%<<<===
+\usepackage{../sty/encoding} % кодировка
+\usepackage{../sty/fields} % поля
+\usepackage{../sty/imgs} % картинки
+\usepackage{../sty/code} % исходный код
+%===>>>
+
+\begin{document}
+
+%<<<===Содержание
+\renewcommand{\contentsname}{Содержание}
+\tableofcontents
+\newpage
+%===>>>
+
+% <<<<< =====
+
+\section{Структура проекта}
+{
+    \scriptsize
+
+\begin{verbatim}
+.
+├── app
+│   └── menu
+│       ├── correct_field
+│       │   └── menu_correct_field
+│       ├── find_arrange_on_range
+│       ├── find_min_max_on_range
+│       ├── menu_add_element
+│       │   ├── add_element_after_element
+│       │   ├── add_element_before_element
+│       │   ├── add_element_on_end
+│       │   ├── add_element_on_position
+│       │   ├── input_ALL_fields
+│       │   ├── input_depth
+│       │   ├── input_length
+│       │   ├── input_name
+│       │   ├── input_type
+│       │   ├── input_volume
+│       │   ├── input_width
+│       │   └── replace_element
+│       ├── menu_del_data
+│       │   ├── del_data_from
+│       │   ├── del_one_element
+│       │   ├── menu_del_less_value_field
+│       │   │   ├── del_if_less_depth
+│       │   │   ├── del_if_less_length
+│       │   │   ├── del_if_less_volume
+│       │   │   └── del_if_less_width
+│       │   └── menu_del_more_value_field
+│       │       ├── del_if_more_depth
+│       │       ├── del_if_more_length
+│       │       ├── del_if_more_volume
+│       │       └── del_if_more_width
+│       ├── menu_sort_data
+│       │   ├── sort_field_depth
+│       │   ├── sort_field_length
+│       │   ├── sort_field_name
+│       │   ├── sort_field_volume
+│       │   ├── sort_field_water_type
+│       │   └── sort_field_width
+│       ├── open_file
+│       ├── out_data
+│       │   ├── out_average_values_in_line
+│       │   ├── out_max_values_in_line
+│       │   ├── out_min_values_in_line
+│       │   ├── print_line
+│       │   ├── print_sep
+│       │   ├── write_head_table
+│       │   ├── write_one_edit_element
+│       │   ├── write_one_element
+│       │   └── write_table_on_range
+│       └── save_file
+└── my_libs
+    ├── clear_console
+    ├── encoding
+    ├── getch
+    ├── indices_array
+    │   ├── add_element_on_array
+    │   ├── get_indices_array_from_file
+    │   └── save_indices_array_on_file
+    ├── int_swap
+    └── pause_console
+
+61 directories
+\end{verbatim}
+
+}
+
+\newpage
+
+\section{Программа}
+
+
+
+\subsection{main()}
+
+\lstinputlisting[
+    language=C,
+    name=main.h
+]{../src/main.h}
+
+\lstinputlisting[
+    language=C,
+    name=main.c
+]{../src/main.c}
+
+
+
+\subsection{app()}
+
+\lstinputlisting[
+    language=C,
+    name=app.h
+]{../src/app/app.h}
+
+\lstinputlisting[
+    language=C,
+    name=app.c
+]{../src/app/app.c}
+
+
+
+\subsection{menu()}
+
+\lstinputlisting[
+    language=C,
+    name=menu.h
+]{../src/app/menu/menu.h}
+
+\lstinputlisting[
+    language=C,
+    name=menu.c
+]{../src/app/menu/menu.c}
+
+
+
+
+
+
+
+\section{Свои библиотеки}
+
+
+
+\subsection{clear\_console()}
+
+\lstinputlisting[
+    language=C,
+    name=clear\_console.h
+]{../src/my_libs/clear_console/clear_console.h}
+
+\lstinputlisting[
+    language=C,
+    name=clear\_console.c
+]{../src/my_libs/clear_console/clear_console.c}
+
+
+
+\subsection{encoding()}
+
+\lstinputlisting[
+    language=C,
+    name=encoding.h
+]{../src/my_libs/encoding/encoding.h}
+
+\lstinputlisting[
+    language=C,
+    name=encoding.c
+]{../src/my_libs/encoding/encoding.c}
+
+
+
+\subsection{getch()}
+
+\lstinputlisting[
+    language=C,
+    name=getch.h
+]{../src/my_libs/getch/getch.h}
+
+\lstinputlisting[
+    language=C,
+    name=getch.c
+]{../src/my_libs/getch/getch.c}
+
+
+
+\subsection{int\_swap()}
+
+\lstinputlisting[
+    language=C,
+    name=int\_swap.h
+]{../src/my_libs/int_swap/int_swap.h}
+
+\lstinputlisting[
+    language=C,
+    name=int\_swap.c
+]{../src/my_libs/int_swap/int_swap.c}
+
+
+
+\subsection{pause\_console()}
+
+\lstinputlisting[
+    language=C,
+    name=pause\_console.h
+]{../src/my_libs/pause_console/pause_console.h}
+
+\lstinputlisting[
+    language=C,
+    name=pause\_console.c
+]{../src/my_libs/pause_console/pause_console.c}
+
+
+
+\subsection{make\_indiced\_array()}
+
+\lstinputlisting[
+    language=C,
+    name=make\_indiced\_array.h
+]{../src/my_libs/indices_array/make_indiced_array.h}
+
+\lstinputlisting[
+    language=C,
+    name=make\_indiced\_array.c
+]{../src/my_libs/indices_array/make_indiced_array.c}
+
+
+
+\subsection{add\_element\_on\_indices\_file()}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_on\_indices\_file.h
+]{../src/my_libs/indices_array/add_element_on_indices_file.h}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_on\_indices\_file.c
+]{../src/my_libs/indices_array/add_element_on_indices_file.c}
+
+
+
+\subsection{add\_element\_on\_array()}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_on\_array.h
+]{../src/my_libs/indices_array/add_element_on_array/add_element_on_array.h}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_on\_array.c
+]{../src/my_libs/indices_array/add_element_on_array/add_element_on_array.c}
+
+
+
+\subsection{get\_indices\_array\_from\_file()}
+
+\lstinputlisting[
+    language=C,
+    name=get\_indices\_array\_from\_file.h
+]{../src/my_libs/indices_array/get_indices_array_from_file/get_indices_array_from_file.h}
+
+\lstinputlisting[
+    language=C,
+    name=get\_indices\_array\_from\_file.c
+]{../src/my_libs/indices_array/get_indices_array_from_file/get_indices_array_from_file.c}
+
+
+
+\subsection{save\_indices\_array\_on\_file()}
+
+\lstinputlisting[
+    language=C,
+    name=save\_indices\_array\_on\_file.h
+]{../src/my_libs/indices_array/save_indices_array_on_file/save_indices_array_on_file.h}
+
+\lstinputlisting[
+    language=C,
+    name=save\_indices\_array\_on\_file.c
+]{../src/my_libs/indices_array/save_indices_array_on_file/save_indices_array_on_file.c}
+
+
+
+\section{Открытие файла}
+
+\subsection{open\_file()}
+
+\lstinputlisting[
+    language=C,
+    name=open\_file.h
+]{../src/app/menu/open_file/open_file.h}
+
+\lstinputlisting[
+    language=C,
+    name=open\_file.c
+]{../src/app/menu/open_file/open_file.c}
+
+
+
+
+
+\section{Добавление элементов}
+
+\subsection{menu\_add\_element()}
+
+\lstinputlisting[
+    language=C,
+    name=menu\_add\_element.h
+]{../src/app/menu/menu_add_element/menu_add_element.h}
+
+\lstinputlisting[
+    language=C,
+    name=open\_file.c
+]{../src/app/menu/menu_add_element/menu_add_element.c}
+
+
+
+\subsection{input\_depth()}
+
+\lstinputlisting[
+    language=C,
+    name=input\_depth.h
+]{../src/app/menu/menu_add_element/input_depth/input_depth.h}
+
+\lstinputlisting[
+    language=C,
+    name=input\_depth.c
+]{../src/app/menu/menu_add_element/input_depth/input_depth.c}
+
+
+
+\subsection{input\_length()}
+
+\lstinputlisting[
+    language=C,
+    name=input\_length.h
+]{../src/app/menu/menu_add_element/input_length/input_length.h}
+
+\lstinputlisting[
+    language=C,
+    name=input\_length.c
+]{../src/app/menu/menu_add_element/input_length/input_length.c}
+
+
+
+
+
+\subsection{input\_name()}
+
+\lstinputlisting[
+    language=C,
+    name=input\_name.h
+]{../src/app/menu/menu_add_element/input_name/input_name.h}
+
+\lstinputlisting[
+    language=C,
+    name=input\_name.c
+]{../src/app/menu/menu_add_element/input_name/input_name.c}
+
+
+
+
+
+
+\subsection{input\_type()}
+
+\lstinputlisting[
+    language=C,
+    name=input\_name.h
+]{../src/app/menu/menu_add_element/input_name/input_name.h}
+
+\lstinputlisting[
+    language=C,
+    name=input\_name.c
+]{../src/app/menu/menu_add_element/input_name/input_name.c}
+
+
+
+
+
+\subsection{input\_volume()}
+
+\lstinputlisting[
+    language=C,
+    name=input\_volume.h
+]{../src/app/menu/menu_add_element/input_volume/input_volume.h}
+
+\lstinputlisting[
+    language=C,
+    name=input\_volume.c
+]{../src/app/menu/menu_add_element/input_volume/input_volume.c}
+
+
+
+\subsection{input\_ALL\_fields()}
+
+\lstinputlisting[
+    language=C,
+    name=input\_ALL\_fields.h
+]{../src/app/menu/menu_add_element/input_ALL_fields/input_ALL_fields.h}
+
+\lstinputlisting[
+    language=C,
+    name=input\_ALL\_fields.c
+]{../src/app/menu/menu_add_element/input_ALL_fields/input_ALL_fields.c}
+
+
+
+\subsection{add\_element\_before\_element()}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_before\_element.h
+]{../src/app/menu/menu_add_element/add_element_before_element/add_element_before_element.h}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_before\_element.c
+]{../src/app/menu/menu_add_element/add_element_before_element/add_element_before_element.c}
+
+
+
+\subsection{replace\_element()}
+
+\lstinputlisting[
+    language=C,
+    name=replace\_element.h
+]{../src/app/menu/menu_add_element/replace_element/replace_element.h}
+
+\lstinputlisting[
+    language=C,
+    name=replace\_element.c
+]{../src/app/menu/menu_add_element/replace_element/replace_element.c}
+
+
+
+\subsection{add\_element\_on\_position()}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_on\_position.h
+]{../src/app/menu/menu_add_element/add_element_on_position/add_element_on_position.h}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_on\_position.c
+]{../src/app/menu/menu_add_element/add_element_on_position/add_element_on_position.c}
+
+
+
+\subsection{add\_element\_after\_element()}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_after\_element.h
+]{../src/app/menu/menu_add_element/add_element_after_element/add_element_after_element.h}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_after\_element.c
+]{../src/app/menu/menu_add_element/add_element_after_element/add_element_after_element.c}
+
+
+
+\subsection{add\_element\_on\_end()}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_on\_end.h
+]{../src/app/menu/menu_add_element/add_element_on_end/add_element_on_end.h}
+
+\lstinputlisting[
+    language=C,
+    name=add\_element\_on\_end.c
+]{../src/app/menu/menu_add_element/add_element_on_end/add_element_on_end.c}
+
+
+\section{Вывод данных}
+
+
+
+\subsection{out\_data()}
+
+\lstinputlisting[
+    language=C,
+    name=out\_data.h
+]{../src/app/menu/out_data/out_data.h}
+
+\lstinputlisting[
+    language=C,
+    name=out\_data.c
+]{../src/app/menu/out_data/out_data.c}
+
+
+
+\subsection{print\_sep()}
+
+\lstinputlisting[
+    language=C,
+    name=print\_sep.h
+]{../src/app/menu/out_data/print_sep/print_sep.h}
+
+\lstinputlisting[
+    language=C,
+    name=print\_sep.c
+]{../src/app/menu/out_data/print_sep/print_sep.c}
+
+
+
+\subsection{print\_line()}
+
+\lstinputlisting[
+    language=C,
+    name=print\_line.h
+]{../src/app/menu/out_data/print_line/print_line.h}
+
+\lstinputlisting[
+    language=C,
+    name=print\_line.c
+]{../src/app/menu/out_data/print_line/print_line.c}
+
+
+
+\subsection{write\_head\_table()}
+
+\lstinputlisting[
+    language=C,
+    name=write\_head\_table.h
+]{../src/app/menu/out_data/write_head_table/write_head_table.h}
+
+\lstinputlisting[
+    language=C,
+    name=write\_head\_table.c
+]{../src/app/menu/out_data/write_head_table/write_head_table.c}
+
+
+\subsection{write\_one\_element()}
+
+\lstinputlisting[
+    language=C,
+    name=write\_one\_element.h
+]{../src/app/menu/out_data/write_one_element/write_one_element.h}
+
+\lstinputlisting[
+    language=C,
+    name=write\_one\_element.c
+]{../src/app/menu/out_data/write_one_element/write_one_element.c}
+
+
+\subsection{write\_one\_edit\_element()}
+
+\lstinputlisting[
+    language=C,
+    name=write\_one\_edit\_element.h
+]{../src/app/menu/out_data/write_one_edit_element/write_one_edit_element.h}
+
+\lstinputlisting[
+    language=C,
+    name=write\_one\_edit\_element.c
+]{../src/app/menu/out_data/write_one_edit_element/write_one_edit_element.c}
+
+
+\subsection{write\_table\_on\_range()}
+
+\lstinputlisting[
+    language=C,
+    name=write\_table\_on\_range.h
+]{../src/app/menu/out_data/write_table_on_range/write_table_on_range.h}
+
+\lstinputlisting[
+    language=C,
+    name=write\_table\_on\_range.c
+]{../src/app/menu/out_data/write_table_on_range/write_table_on_range.c}
+
+
+
+\subsection{out\_average\_values\_in\_line()}
+
+\lstinputlisting[
+    language=C,
+    name=out\_average\_values\_in\_line.h
+]{../src/app/menu/out_data/out_average_values_in_line/out_average_values_in_line.h}
+
+\lstinputlisting[
+    language=C,
+    name=out\_average\_values\_in\_line.c
+]{../src/app/menu/out_data/out_average_values_in_line/out_average_values_in_line.c}
+
+
+
+\subsection{out\_max\_values\_in\_line()}
+
+\lstinputlisting[
+    language=C,
+    name=out\_max\_values\_in\_line.h
+]{../src/app/menu/out_data/out_max_values_in_line/out_max_values_in_line.h}
+
+\lstinputlisting[
+    language=C,
+    name=out\_max\_values\_in\_line.c
+]{../src/app/menu/out_data/out_max_values_in_line/out_max_values_in_line.c}
+
+
+
+\subsection{out\_min\_values\_in\_line()}
+
+\lstinputlisting[
+    language=C,
+    name=out\_min\_values\_in\_line.h
+]{../src/app/menu/out_data/out_min_values_in_line/out_min_values_in_line.h}
+
+\lstinputlisting[
+    language=C,
+    name=out\_min\_values\_in\_line.c
+]{../src/app/menu/out_data/out_min_values_in_line/out_min_values_in_line.c}
+
+
+
+\section{Сохранение файла}
+
+\subsection{save\_file()}
+
+\lstinputlisting[
+    language=C,
+    name=save\_file.h
+]{../src/app/menu/save_file/save_file.h}
+
+\lstinputlisting[
+    language=C,
+    name=save\_file.c
+]{../src/app/menu/save_file/save_file.c}
+
+
+
+\section{Корректировать поле}
+
+\subsection{correct\_field()}
+
+\lstinputlisting[
+    language=C,
+    name=correct\_field.h
+]{../src/app/menu/correct_field/correct_field.h}
+
+\lstinputlisting[
+    language=C,
+    name=correct\_field.c
+]{../src/app/menu/correct_field/correct_field.c}
+
+
+
+\subsection{menu\_correct\_field()}
+
+\lstinputlisting[
+    language=C,
+    name=menu\_correct\_field.h
+]{../src/app/menu/correct_field/menu_correct_field/menu_correct_field.h}
+
+\lstinputlisting[
+    language=C,
+    name=menu\_correct\_field.c
+]{../src/app/menu/correct_field/menu_correct_field/menu_correct_field.c}
+
+
+
+\section{Удаление элементов}
+
+
+
+\subsection{menu\_del\_data()}
+
+\lstinputlisting[
+    language=C,
+    name=menu\_del\_data.h
+]{../src/app/menu/menu_del_data/menu_del_data.h}
+
+\lstinputlisting[
+    language=C,
+    name=menu\_del\_data.c
+]{../src/app/menu/menu_del_data/menu_del_data.c}
+
+
+\subsection{del\_one\_element()}
+
+\lstinputlisting[
+    language=C,
+    name=del\_one\_element.h
+]{../src/app/menu/menu_del_data/del_one_element/del_one_element.h}
+
+\lstinputlisting[
+    language=C,
+    name=del\_one\_element.c
+]{../src/app/menu/menu_del_data/del_one_element/del_one_element.c}
+
+
+
+\subsection{del\_data\_from()}
+
+\lstinputlisting[
+    language=C,
+    name=del\_data\_from.h
+]{../src/app/menu/menu_del_data/del_data_from/del_data_from.h}
+
+\lstinputlisting[
+    language=C,
+    name=del\_data\_from.c
+]{../src/app/menu/menu_del_data/del_data_from/del_data_from.c}
+
+
+
+\subsection{menu\_del\_less\_value\_field()}
+
+\lstinputlisting[
+    language=C,
+    name=menu\_del\_less\_value\_field.h
+]{../src/app/menu/menu_del_data/menu_del_less_value_field/menu_del_less_value_field.h}
+
+\lstinputlisting[
+    language=C,
+    name=menu\_del\_less\_value\_field.c
+]{../src/app/menu/menu_del_data/menu_del_less_value_field/menu_del_less_value_field.c}
+
+
+
+\subsection{del\_if\_less\_depth()}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_less\_depth.h
+]{../src/app/menu/menu_del_data/menu_del_less_value_field/del_if_less_depth/del_if_less_depth.h}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_less\_depth.c
+]{../src/app/menu/menu_del_data/menu_del_less_value_field/del_if_less_depth/del_if_less_depth.c}
+
+
+
+\subsection{del\_if\_less\_length()}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_less\_length.h
+]{../src/app/menu/menu_del_data/menu_del_less_value_field/del_if_less_length/del_if_less_length.h}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_less\_length.c
+]{../src/app/menu/menu_del_data/menu_del_less_value_field/del_if_less_length/del_if_less_length.c}
+
+
+
+\subsection{del\_if\_less\_volume()}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_less\_volume.h
+]{../src/app/menu/menu_del_data/menu_del_less_value_field/del_if_less_volume/del_if_less_volume.h}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_less\_volume.c
+]{../src/app/menu/menu_del_data/menu_del_less_value_field/del_if_less_volume/del_if_less_volume.c}
+
+
+
+\subsection{del\_if\_less\_width()}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_less\_width.h
+]{../src/app/menu/menu_del_data/menu_del_less_value_field/del_if_less_width/del_if_less_width.h}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_less\_width.c
+]{../src/app/menu/menu_del_data/menu_del_less_value_field/del_if_less_width/del_if_less_width.c}
+
+
+\subsection{menu\_del\_more\_value\_field()}
+
+\lstinputlisting[
+    language=C,
+    name=menu\_del\_more\_value\_field.h
+]{../src/app/menu/menu_del_data/menu_del_more_value_field/menu_del_more_value_field.h}
+
+\lstinputlisting[
+    language=C,
+    name=menu\_del\_more\_value\_field.c
+]{../src/app/menu/menu_del_data/menu_del_more_value_field/menu_del_more_value_field.c}
+
+
+
+\subsection{del\_if\_more\_depth()}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_more\_depth.h
+]{../src/app/menu/menu_del_data/menu_del_more_value_field/del_if_more_depth/del_if_more_depth.h}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_more\_depth.c
+]{../src/app/menu/menu_del_data/menu_del_more_value_field/del_if_more_depth/del_if_more_depth.c}
+
+
+
+\subsection{del\_if\_more\_length()}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_more\_length.h
+]{../src/app/menu/menu_del_data/menu_del_more_value_field/del_if_more_length/del_if_more_length.h}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_more\_length.c
+]{../src/app/menu/menu_del_data/menu_del_more_value_field/del_if_more_length/del_if_more_length.c}
+
+
+
+\subsection{del\_if\_more\_volume()}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_more\_volume.h
+]{../src/app/menu/menu_del_data/menu_del_more_value_field/del_if_more_volume/del_if_more_volume.h}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_more\_volume.c
+]{../src/app/menu/menu_del_data/menu_del_more_value_field/del_if_more_volume/del_if_more_volume.c}
+
+
+
+\subsection{del\_if\_more\_width()}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_more\_width.h
+]{../src/app/menu/menu_del_data/menu_del_more_value_field/del_if_more_width/del_if_more_width.h}
+
+\lstinputlisting[
+    language=C,
+    name=del\_if\_more\_width.c
+]{../src/app/menu/menu_del_data/menu_del_more_value_field/del_if_more_width/del_if_more_width.c}
+
+
+\section{Сортировка}
+
+
+
+\subsection{menu\_sort\_data()}
+
+\lstinputlisting[
+    language=C,
+    name=menu\_sort\_data.h
+]{../src/app/menu/menu_sort_data/menu_sort_data.h}
+
+\lstinputlisting[
+    language=C,
+    name=menu\_sort\_data.c
+]{../src/app/menu/menu_sort_data/menu_sort_data.c}
+
+
+\subsection{sort\_field\_depth()}
+
+\lstinputlisting[
+    language=C,
+    name=sort\_field\_depth.h
+]{../src/app/menu/menu_sort_data/sort_field_depth/sort_field_depth.h}
+
+\lstinputlisting[
+    language=C,
+    name=sort\_field\_depth.c
+]{../src/app/menu/menu_sort_data/sort_field_depth/sort_field_depth.c}
+
+
+
+\subsection{sort\_field\_length()}
+
+\lstinputlisting[
+    language=C,
+    name=sort\_field\_length.h
+]{../src/app/menu/menu_sort_data/sort_field_length/sort_field_length.h}
+
+\lstinputlisting[
+    language=C,
+    name=sort\_field\_length.c
+]{../src/app/menu/menu_sort_data/sort_field_length/sort_field_length.c}
+
+
+
+\subsection{sort\_field\_volume()}
+
+\lstinputlisting[
+    language=C,
+    name=sort\_field\_volume.h
+]{../src/app/menu/menu_sort_data/sort_field_volume/sort_field_volume.h}
+
+\lstinputlisting[
+    language=C,
+    name=sort\_field\_volume.c
+]{../src/app/menu/menu_sort_data/sort_field_volume/sort_field_volume.c}
+
+
+
+\subsection{sort\_field\_water\_type()}
+
+\lstinputlisting[
+    language=C,
+    name=sort\_field\_water\_type.h
+]{../src/app/menu/menu_sort_data/sort_field_water_type/sort_field_water_type.h}
+
+\lstinputlisting[
+    language=C,
+    name=sort\_field\_water\_type.c
+]{../src/app/menu/menu_sort_data/sort_field_water_type/sort_field_water_type.c}
+
+
+
+\subsection{sort\_field\_width()}
+
+\lstinputlisting[
+    language=C,
+    name=sort\_field\_width.h
+]{../src/app/menu/menu_sort_data/sort_field_width/sort_field_width.h}
+
+\lstinputlisting[
+    language=C,
+    name=sort\_field\_width.c
+]{../src/app/menu/menu_sort_data/sort_field_width/sort_field_width.c}
+
+
+
+
+\section{Поиск min/max в диапазоне}
+
+\subsection{find\_min\_max\_on\_range()}
+
+\lstinputlisting[
+    language=C,
+    name=find\_min\_max\_on\_range.h
+]{../src/app/menu/find_min_max_on_range/find_min_max_on_range.h}
+
+\lstinputlisting[
+    language=C,
+    name=find\_min\_max\_on\_range.c
+]{../src/app/menu/find_min_max_on_range/find_min_max_on_range.c}
+
+
+
+\section{Поиск среднего в диапазоне}
+
+
+
+\subsection{find\_arrange\_on\_range()}
+
+\lstinputlisting[
+    language=C,
+    name=find\_min\_max\_or\_range.h
+]{../src/app/menu/find_arrange_on_range/find_arrange_on_range.h}
+
+\lstinputlisting[
+    language=C,
+    name=find\_min\_max\_or\_range.c
+]{../src/app/menu/find_arrange_on_range/find_arrange_on_range.c}
+
+
+
+\end{document}

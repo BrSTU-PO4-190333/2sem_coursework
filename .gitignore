@@ -1,3 +1,14 @@
+# Makefile / C
 zzz_pear_test
 *.d
 *.o
+
+# Latex
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
