@@ -16,7 +16,3 @@
         return ch;
     }
 #endif
-
-#if defined(_WIN32) || defined(_WIN64)
-    #include <conio.h>
-#endif
