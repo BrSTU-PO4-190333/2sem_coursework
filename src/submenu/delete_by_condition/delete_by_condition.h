@@ -4,6 +4,7 @@
     #include "../../main.h"
     #include "../../menu/menu.h"
 
+    void delete_by_condition(struct data* array, int length);
     void delete_elements_if_is_less_length(struct data* array, int length);
     void delete_elements_if_is_less_area(struct data* array, int length);
     void delete_elements_if_is_less_number_of_ports(struct data* array, int length);
