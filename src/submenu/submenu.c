@@ -6,7 +6,7 @@ void submenu(struct data* array, int length)
 
     printf("Меню:\n");
     printf("1. Удаление элементов по условию (поле < или > заданного значения)\n");
-    printf("2. Сортировка массива по числовому полю\n");
+    printf("2. Сортировка массива по числовому полю (и по строковой)\n");
     printf("3. Вставка нового элемента перед выбраннным элементом\n");
     printf("0. Выйти из меню\n");
 
@@ -18,6 +18,7 @@ void submenu(struct data* array, int length)
         case '1':
             break;
         case '2':
+            sort_elements(array, length);
             break;
         case '3':
             add_element_before(array, length);
