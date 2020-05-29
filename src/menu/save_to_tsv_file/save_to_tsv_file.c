@@ -30,8 +30,8 @@ void save_to_tsv_file(struct data* array, int length)
             fprintf(file_pointer, "%d", array[i].water_type);
             fprintf(file_pointer, "\n");
         }
+        fclose(file_pointer);
     }
-    fclose(file_pointer);
 
     menu(array, length);
 }
