@@ -10,4 +10,5 @@
     void view_all_elements(struct data* array, int length);
     void print_head_table();
     void print_separator();
+    void print_line(int k);
 #endif

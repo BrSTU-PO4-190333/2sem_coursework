@@ -14,6 +14,8 @@ void view_all_elements(struct data* array, int length)
         for (int i = 0; i < length; i++)
         {
             print_separator();
+            printf("%-4d", i);
+            print_separator();
             printf("%-4d ", array[i].name_size);
             printf("%-16s", array[i].name);
             print_separator();
@@ -40,6 +42,8 @@ void view_all_elements(struct data* array, int length)
 void print_head_table()
 {
     print_separator();
+    printf("#   ");
+    print_separator();
     printf("байт ");
     printf("Строка          ");
     print_separator();
@@ -52,6 +56,29 @@ void print_head_table()
     printf("Тип             ");
     print_separator();
     printf("\n");
+
+    print_separator();
+    print_line(4);
+    print_separator();
+    print_line(4 + 1 + 16);
+    print_separator();
+    print_line(16);
+    print_separator();
+    print_line(16);
+    print_separator();
+    print_line(16);
+    print_separator();
+    print_line(16);
+    print_separator();
+    printf("\n");
+}
+
+void print_line(int k)
+{
+    for (int i = 0; i < k; i++)
+    {
+        printf("-");
+    }
 }
 
 void print_separator()
