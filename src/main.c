@@ -2,7 +2,8 @@
 
 int main()
 {
-    app();
-
+    int length = 0;
+    struct data* array = (struct data*) calloc(length, sizeof(struct data));
+    menu(array, length);
     return 0;
 }
