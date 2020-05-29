@@ -10,6 +10,7 @@
     #include "../../libs/pause_console/pause_console.h"
 
     void sort_elements(struct data* array, int length);
+    void data_swap(struct data* a, struct data* b);
     void sort_by_field_name(struct data* array, int length);
     void sort_by_field_length(struct data* array, int length);
     void sort_by_field_area(struct data* array, int length);

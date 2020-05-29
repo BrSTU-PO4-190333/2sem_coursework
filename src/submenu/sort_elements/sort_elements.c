@@ -37,6 +37,13 @@ void sort_elements(struct data* array, int length)
     }
 }
 
+void data_swap(struct data* a, struct data* b)
+{
+    struct data temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
 void sort_by_field_name(struct data* array, int length)
 {
     for (int i = 0; i < length; i++)
@@ -45,9 +52,7 @@ void sort_by_field_name(struct data* array, int length)
         {
             if (strcmp(array[i].name, array[j].name) < 0)
             {
-                struct data temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                data_swap(&array[i], &array[j]);
             }
         }
     }
@@ -62,9 +67,7 @@ void sort_by_field_length(struct data* array, int length)
         {
             if (array[i].length < array[j].length)
             {
-                struct data temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                data_swap(&array[i], &array[j]);
             }
         }
     }
@@ -79,9 +82,7 @@ void sort_by_field_area(struct data* array, int length)
         {
             if (array[i].area < array[j].area)
             {
-                struct data temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                data_swap(&array[i], &array[j]);
             }
         }
     }
@@ -96,9 +97,7 @@ void sort_by_field_number_of_ports(struct data* array, int length)
         {
             if (array[i].number_of_ports < array[j].number_of_ports)
             {
-                struct data temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                data_swap(&array[i], &array[j]);
             }
         }
     }
@@ -113,9 +112,7 @@ void sort_by_field_water_type(struct data* array, int length)
         {
             if (array[i].water_type < array[j].water_type)
             {
-                struct data temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                data_swap(&array[i], &array[j]);
             }
         }
     }
