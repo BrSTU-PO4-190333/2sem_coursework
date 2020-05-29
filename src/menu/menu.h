@@ -9,6 +9,7 @@
     #include "save_to_tsv_file/save_to_tsv_file.h" //4
     #include "correct_field/correct_field.h" //5
     #include "delete_element/delete_element.h" //6
+    #include "../submenu/submenu.h" //7
 
     void menu(struct data* array, int length);
 #endif

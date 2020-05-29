@@ -35,6 +35,9 @@ void menu(struct data* array, int length)
     case '6':
         delete_element(array, length);
         break;
+    case '7':
+        submenu(array, length);
+        break;
     default:
         menu(array, length);
     }
