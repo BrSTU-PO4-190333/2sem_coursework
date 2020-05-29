@@ -19,6 +19,10 @@ void correct_field(struct data* array, int length)
         }
 
         correct_field_menu(array, position);
+        printf("Новое поле:\n");
+        print_head_table();
+        print_one_element(array, position);
+        printf("\n");
     }
     
     pause_console();
@@ -29,6 +33,12 @@ void correct_field_menu(struct data* array, int position)
 {
     clear_console();
 
+    printf("Редактированное поле:\n");
+    print_head_table();
+    print_one_element(array, position);
+    printf("\n");
+
+    printf("Меню:\n");
     printf("1. Редактировать поле названия водоема страны\n");
     printf("2. Редактировать поле протяженности\n");
     printf("3. Редактировать поле площади\n");
@@ -58,6 +68,11 @@ void correct_field_menu(struct data* array, int position)
         default:
             correct_field_menu(array, position);
     }
+}
+
+void print_edited_element(struct data* array, int position)
+{
+    
 }
 
 void correct_name(struct data* array, int position)

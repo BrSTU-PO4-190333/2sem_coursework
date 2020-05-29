@@ -13,30 +13,35 @@ void view_all_elements(struct data* array, int length)
         print_head_table();
         for (int i = 0; i < length; i++)
         {
-            print_separator();
-            printf("%-4d", i);
-            print_separator();
-            printf("%-4d ", array[i].name_size);
-            printf("%-16s", array[i].name);
-            print_separator();
-            printf("%-16ld", array[i].length);
-            print_separator();
-            printf("%-16ld", array[i].area);
-            print_separator();
-            printf("%-16d", array[i].number_of_ports);
-            print_separator();
-            array[i].water_type == artificial?
-                printf("искусственный   "):
-                array[i].water_type == natural?
-                    printf("природный       "):
-                    printf("                ");
-            print_separator();
-            printf("\n");
+            print_one_element(array, i);
         }
     }
     
     pause_console();
     menu(array, length);
+}
+
+void print_one_element(struct data* array, int position)
+{
+    print_separator();
+    printf("%-4d", position);
+    print_separator();
+    printf("%-4d ", array[position].name_size);
+    printf("%-16s", array[position].name);
+    print_separator();
+    printf("%-16ld", array[position].length);
+    print_separator();
+    printf("%-16ld", array[position].area);
+    print_separator();
+    printf("%-16d", array[position].number_of_ports);
+    print_separator();
+    array[position].water_type == artificial?
+        printf("искусственный   "):
+        array[position].water_type == natural?
+            printf("природный       "):
+            printf("                ");
+    print_separator();
+    printf("\n");
 }
 
 void print_head_table()

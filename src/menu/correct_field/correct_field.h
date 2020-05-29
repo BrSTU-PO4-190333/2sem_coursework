@@ -6,10 +6,12 @@
 
     #include "../menu.h"
     #include "../../main.h"
+    #include "../view_all_elements/view_all_elements.h"
     #include "../../libs/clear_console/clear_console.h"
     #include "../../libs/pause_console/pause_console.h"
 
     void correct_field(struct data* array, int length);
+    void print_edited_element(struct data* array, int position);
     void correct_field_menu(struct data* array, int position);
     void correct_name(struct data* array, int position);
     void correct_length(struct data* array, int position);
