@@ -16,6 +16,7 @@ void submenu(struct data* array, int length)
             menu(array, length);
             break;
         case '1':
+            delete_by_condition(array, length);
             break;
         case '2':
             sort_elements(array, length);

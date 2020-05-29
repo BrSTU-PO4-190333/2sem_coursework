@@ -6,6 +6,7 @@
     #include "../main.h"
     #include "../menu/menu.h"
     #include "../libs/getch/getch.h"
+    #include "delete_by_condition/delete_by_condition.h" //1
     #include "sort_elements/sort_elements.h" //2
     #include "add_element_before/add_element_before.h" //3
 
