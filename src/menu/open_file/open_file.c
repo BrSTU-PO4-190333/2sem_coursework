@@ -21,12 +21,17 @@ void open_file(struct data* array, int length)
 void read_file(struct data* array, int length, char* path)
 {
     FILE* file_pointer = fopen(path, "r"); //получили указатель на файл
+    free(path);
     if (file_pointer == NULL) //если указателя на файл нет
     {
         printf("Файл не может открыться для чтения\n");
     }
     else
     {
+        for (int i = 0; i < length; i++)
+        {
+            free(array[i].name);
+        }
         length = 0; //элементов в массиве теперь 0
         free(array); //очистка массива
         array = (struct data*) calloc(length, sizeof(struct data)); //выделение динамической памяти масиву

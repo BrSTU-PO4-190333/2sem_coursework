@@ -20,6 +20,7 @@ void submenu(struct data* array, int length)
         case '2':
             break;
         case '3':
+            add_element_before(array, length);
             break;
         default:
             submenu(array, length);
