@@ -1,4 +1,4 @@
-# BSTU-OAiP-course-work
+# 2-semestr-OAiP-courseWork
 
 ## Компиляция и запуск
 
