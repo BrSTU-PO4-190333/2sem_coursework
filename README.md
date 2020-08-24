@@ -15,3 +15,19 @@ make
 ```bash
 ./App
 ```
+
+## Пояснительная записка. Приложение А. Приложение Б
+
+Используется `Visual Studio Code` и расширение `LaTeXWorkshop`.
+
+Компилятор:
+- Windows: установить `MikTex` и `Strawberry`
+- Linux:
+    - Ubuntu-подобные: `sudo apt install texlive-full`
+
+Расположение основных файлов:
+- VSCode-LaTeXWorkshop-report/mainFile_PZ.tex
+- VSCode-LaTeXWorkshop-report/mainFile_A.tex
+- VSCode-LaTeXWorkshop-report/mainFile_B.tex
+
+При сохранении файла `Visual Studio Code` автоматически создаёт pdf-файл.
