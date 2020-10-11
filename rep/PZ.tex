@@ -1,10 +1,10 @@
 \documentclass[12pt, a4paper, simple]{eskdtext}
 
-\usepackage{../title_variables}
-\usepackage{../eskd_variables}
-\usepackage{../sourceCode}
-\usepackage{../tableOfContent}
-\usepackage{../list}
+\usepackage{_sty/title_variables}
+\usepackage{_sty/eskd_variables}
+\usepackage{_sty/sourceCode}
+\usepackage{_sty/tableOfContent}
+\usepackage{_sty/list}
 
 % Графа 1 (наименование изделия/документа)
 \ESKDcolumnI{\ESKDfontIII\titlePageTopic\\ПОЯСНИТЕЛЬНАЯ ЗАПИСКА}
@@ -14,8 +14,8 @@
 
 \begin{document}
     \begin{ESKDtitlePage}
-       \input{../includes_PZ/titlePage.tex}
+       \input{_input/titlePagePZ.tex}
     \end{ESKDtitlePage}
 
-   \input{../includes_PZ/task.tex}
+   \input{_input/taskPZ.tex}
 \end{document}
