@@ -4,13 +4,13 @@ gpi_build-pdf:
 	make gpi_build-b
 
 gpi_build-pz:
-	latexmk -pdf -output-directory=_build gpi_2coursework_pz.tex
+	latexmk -pdf -output-directory=_build gpi_1coursework_pz.tex
 
 gpi_build-a:
-	latexmk -pdf -output-directory=_build gpi_2coursework_a.tex
+	latexmk -pdf -output-directory=_build gpi_1coursework_a.tex
 
 gpi_build-b:
-	latexmk -pdf -output-directory=_build gpi_2coursework_b.tex
+	latexmk -pdf -output-directory=_build gpi_1coursework_b.tex
 
 gpi_clean:
 	rm -rfv ./*/*.aux
