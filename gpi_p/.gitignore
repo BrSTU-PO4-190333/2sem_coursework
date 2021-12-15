@@ -1,7 +1,10 @@
+# LaTeX
 *.aux
 *.fdb_latexmk
 *.fls
 *.log
+*.out
 *.pdf
-*.toc
 *.synctex.gz
+*.toc
+_build
