@@ -1,25 +1,6 @@
-## PDF files
+## Demo
 
-- [ТЕХНИЧЕСКОЕ ЗАДАНИЕ](https://github.com/Pavel-Innokentevich-Galanin/gpi_1coursework/raw/pdf/gpi_1coursework_tz.pdf)
-- [ПОЯСНИТЕЛЬНАЯ ЗАПИСКА](https://github.com/Pavel-Innokentevich-Galanin/gpi_1coursework/raw/pdf/gpi_1coursework_pz.pdf)
-- [ПРИЛОЖЕНИЕ А - ТЕКСТ ПРОГРАММЫ](https://github.com/Pavel-Innokentevich-Galanin/gpi_1coursework/raw/pdf/gpi_1coursework_a.pdf)
-- [ПРИЛОЖЕНИЕ Б - СХЕМА АЛГОРИТМА](https://github.com/Pavel-Innokentevich-Galanin/gpi_1coursework/raw/pdf/gpi_1coursework_b.pdf)
-
----
-
-## Project tree
-
-```
-tree --charset ascii -I node_module
-```
-
-```
-.
-`-- gpi_p   # PDF: docker-compose, LaTeX (texlive)
-```
-
-## Commands
-
-| Command      | Description                                |
-| ------------ | ------------------------------------------ |
-|`make gpi_wp` | cmd: launching a PDF compilation           |
+- [ТЕХНИЧЕСКОЕ ЗАДАНИЕ](https://github.com/Pavel-Innokentevich-Galanin/2sem_coursework/blob/gh-pages/1_курсовая_ПО-4_Галанин_ТЗ.pdf)
+- [ПОЯСНИТЕЛЬНАЯ ЗАПИСКА](https://github.com/Pavel-Innokentevich-Galanin/2sem_coursework/blob/gh-pages/1_курсовая_ПО-4_Галанин_ПЗ.pdf)
+- [ПРИЛОЖЕНИЕ А - ТЕКСТ ПРОГРАММЫ](https://github.com/Pavel-Innokentevich-Galanin/2sem_coursework/blob/gh-pages/1_курсовая_ПО-4_Галанин_ПрилА.pdf)
+- [ПРИЛОЖЕНИЕ Б - СХЕМА АЛГОРИТМА](https://github.com/Pavel-Innokentevich-Galanin/2sem_coursework/blob/gh-pages/1_курсовая_ПО-4_Галанин_ПрилБ.pdf)
