@@ -5,6 +5,6 @@ docker-compose-script:
 	latexmk -pdf -output-directory=/temp/ -jobname=KP.PO4.190333-01_12_00 main_coursework_3_a.tex
 	latexmk -pdf -output-directory=/temp/ -jobname=KP.PO4.190333-01_90_00 main_coursework_4_b.tex
 
-	latexmk -pdf -output-directory=/temp/ -jobname=КП.ПО4.190333-01_81_00.all main.tex
+	latexmk -pdf -output-directory=/temp/ -jobname=KP.PO4.190333-01_81_00.bundle main.tex
 
 	cp /temp/*.pdf /build/
