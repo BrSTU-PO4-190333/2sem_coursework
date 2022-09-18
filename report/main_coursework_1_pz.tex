@@ -1,0 +1,26 @@
+\documentclass[12pt, a4paper, simple]{eskdtext}
+
+\usepackage{_sty/title_variables}
+\usepackage{_sty/eskd_variables}
+\usepackage{_sty/sourceCode}
+\usepackage{_sty/tableOfContent}
+\usepackage{_sty/list}
+\usepackage{hyperref}
+
+% Графа 1 (наименование изделия/документа)
+\ESKDcolumnI{\ESKDfontIII\titlePageTopic\\ПОЯСНИТЕЛЬНАЯ ЗАПИСКА}
+
+% Графа 2 (обозначение документа)
+\ESKDsignature{\codePZ} 
+
+\begin{document}
+    \begin{ESKDtitlePage}
+       \input{_input/titlePagePZ.tex}
+    \end{ESKDtitlePage}
+    \ESKDthisStyle{empty}
+   Здесь лист с ТЗ.
+   \newpage
+   \ESKDthisStyle{formII}
+
+   \input{_input/taskPZ.tex}
+\end{document}
